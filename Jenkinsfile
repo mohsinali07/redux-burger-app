@@ -5,7 +5,9 @@ pipeline {
     stage("build") {
       steps {
         echo 'building the application...'
-        echo 'Application build'
+        nodejs('Node-18.19'){
+          sh 'yarn install'
+        }
       }
     }
 
